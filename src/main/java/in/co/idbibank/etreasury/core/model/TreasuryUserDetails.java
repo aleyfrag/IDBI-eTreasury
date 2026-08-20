@@ -1,0 +1,21 @@
+package in.co.idbibank.etreasury.core.model;
+
+import java.time.LocalDateTime;
+
+public record TreasuryUserDetails(
+        long userId,
+        String userCode,
+        String einNumber,
+        String solId,
+        String role,
+        String status,
+        String rights,
+        String bulkUpload,
+        String adminStatus,
+        String createdBy,
+        LocalDateTime creationTime,
+        String modifiedBy,
+        LocalDateTime modifiedOn,
+        String approvedRejectedBy,
+        LocalDateTime approvedRejectedOn) {
+}

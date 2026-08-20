@@ -1,0 +1,138 @@
+.topbar {
+  height: 68px;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: #fff;
+  border-bottom: 3px solid #bed600;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  position: relative;
+  border: 3px solid var(--idbi-red);
+  border-radius: 50% 50% 50% 8px;
+  transform: rotate(-18deg);
+}
+
+.brand-icon::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 2px solid var(--idbi-red);
+  border-radius: 50% 50% 50% 4px;
+}
+
+.brand-name { font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; font-size: 1.35rem; font-weight: 700; line-height: 1; }
+.brand-subtitle { display: block; margin-top: .28rem; color: var(--treasury-muted); font-size: .72rem; font-weight: 600; }
+
+.topbar-business-date {
+  padding-right: .25rem;
+  line-height: 1.15;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.topbar-business-date small,
+.topbar-business-date strong {
+  display: block;
+}
+
+.topbar-business-date small {
+  color: #6b7d87;
+  font-size: .61rem;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.topbar-business-date strong {
+  margin-top: .15rem;
+  color: #003968;
+  font-size: .72rem;
+  font-weight: 750;
+}
+.topbar-user-details {
+  max-width: min(55vw, 760px);
+  line-height: 1.15;
+}
+
+.topbar-user-identity,
+.topbar-user-meta {
+  white-space: nowrap;
+}
+
+.topbar-user-identity {
+  color: #003968;
+  font-size: .88rem;
+}
+
+.topbar-ein {
+  margin-left: .25rem;
+}
+
+.topbar-identity-separator {
+  margin: 0 .42rem;
+  color: #94a4ad;
+  font-weight: 400;
+}
+
+.topbar-user-meta {
+  margin-top: .24rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .66rem;
+}
+
+.topbar-user-meta strong {
+  font-weight: 700;
+}
+
+.topbar-meta-separator {
+  margin: 0 .38rem;
+  color: #94a4ad;
+  font-weight: 400;
+}
+
+.topbar-logout-form {
+  margin: 0;
+}
+
+.topbar-logout-button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: #fff;
+  background: #007d89;
+  border: 0;
+  border-radius: 50%;
+  transition: background-color .15s ease, transform .15s ease;
+}
+
+.topbar-logout-button:hover,
+.topbar-logout-button:focus-visible {
+  color: #fff;
+  background: #003968;
+  transform: translateY(-1px);
+}
+
+.topbar-logout-button:focus-visible {
+  outline: 2px solid #bed600;
+  outline-offset: 2px;
+}
+
+@media (max-width: 991.98px) {
+  .topbar { height: 62px; }
+}
+
+@media (max-width: 575.98px) {
+  .brand-name { font-size: 1.05rem; }
+}

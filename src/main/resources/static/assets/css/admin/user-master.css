@@ -1,0 +1,144 @@
+/* Main Admin card containing the page heading and Chrome-style tabs. */
+.admin-workspace {
+  overflow: hidden;
+}
+
+/* Heading remains visually separate from the tab strip. */
+.admin-workspace-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid #dce5e3;
+}
+
+.admin-workspace-heading > svg {
+  color: #007d89;
+}
+
+/* Horizontally scrollable strip behaves like browser tabs on smaller screens. */
+.admin-tab-strip {
+  display: flex;
+  align-items: flex-end;
+  gap: .2rem;
+  overflow-x: auto;
+  padding: .65rem .75rem 0;
+  background: #e9efee;
+  border-bottom: 1px solid #cbd8d5;
+  scrollbar-width: thin;
+}
+
+/* Individual inactive Chrome-style tab. */
+.admin-tab {
+  display: inline-flex;
+  min-width: max-content;
+  align-items: center;
+  gap: .45rem;
+  padding: .62rem .85rem;
+  color: #536764;
+  background: #dce6e4;
+  border: 1px solid #c7d4d1;
+  border-bottom: 0;
+  border-radius: 9px 9px 0 0;
+  font-size: .74rem;
+  font-weight: 750;
+}
+
+.admin-tab:hover,
+.admin-tab:focus-visible {
+  color: #003968;
+  background: #f3f7f6;
+}
+
+.admin-tab:focus-visible {
+  outline: 2px solid #007d89;
+  outline-offset: -2px;
+}
+
+/* Active tab visually joins the white content panel. */
+.admin-tab.active {
+  position: relative;
+  z-index: 1;
+  color: #003968;
+  background: #fff;
+  border-color: #bfcfcb;
+}
+
+.admin-tab-content {
+  min-height: 300px;
+  padding: 1.25rem;
+  background: #fff;
+}
+.user-summary-card {
+  display: flex;
+  min-height: 118px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #dce5e3;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(12, 51, 55, .04);
+}
+.user-summary-card > div { display: flex; flex-direction: column; }
+.user-summary-card .metric-label { color: #647572; font-size: .68rem; font-weight: 800; letter-spacing: .04em; }
+.user-summary-card strong { margin: .45rem 0 .1rem; color: #294f68; font-size: 1.55rem; line-height: 1; }
+.user-summary-card small { color: #73817f; font-size: .7rem; }
+.user-summary-card .metric-icon { width: 38px; height: 38px; display: grid; place-items: center; color: #536700; background: #f1f5d7; border-radius: 6px; }
+.user-section-panel { overflow: hidden; background: #fff; border: 1px solid #dce5e3; border-radius: 7px; }
+.user-section-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 1rem; border-bottom: 1px solid #e3eae8; }
+.user-section-header h2 { margin: 0 0 .12rem; color: #294f68; font-size: .88rem; font-weight: 800; }
+.user-section-header p { margin: 0; color: #73817f; font-size: .7rem; }
+.user-section-header > svg { color: #087f8c; }
+.record-count { padding: .25rem .55rem; color: #087f8c; background: #e5f4f3; border-radius: 999px; font-size: .68rem; font-weight: 750; }
+.user-master-form { padding: 1rem; background: #fbfcfc; }
+.user-master-form .form-label { margin-bottom: .35rem; color: #425653; font-size: .72rem; font-weight: 750; }
+.user-master-form .form-control, .user-master-form .form-select { min-height: 38px; font-size: .78rem; }
+.admin-check { min-width: 90px; padding-bottom: .55rem; }
+.user-master-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; padding-top: .85rem; border-top: 1px solid #e5ebe9; }
+.user-master-message { margin-bottom: .8rem; padding: .6rem .75rem; border-radius: 5px; transition: opacity .6s; }
+.user-master-message.is-success { color: #14532d; background: #dcfce7; }
+.user-master-message.is-error { color: #991b1b; background: #fee2e2; }
+.user-master-message.is-fading { opacity: 0; }
+.user-master-table { min-width: 1500px; margin: 0; font-size: .7rem; }
+.user-master-table thead th { padding: .65rem .7rem; white-space: nowrap; color: #fff; background: #08737d; border: 0; font-size: .65rem; text-transform: uppercase; }
+.user-master-table tbody td { padding: .62rem .7rem; white-space: nowrap; color: #4e605d; }
+.user-master-table tbody tr { cursor: pointer; }
+.user-master-table tbody tr:hover { background: #f2f8f7; }
+.status-badge { display: inline-block; padding: .2rem .45rem; border-radius: 999px; font-size: .64rem; font-weight: 750; }
+.status-badge.is-active { color: #166534; background: #dcfce7; }
+.status-badge.is-inactive { color: #991b1b; background: #fee2e2; }
+
+/* Temporary panel content until each master feature is implemented. */
+.admin-empty-state {
+  display: grid;
+  min-height: 250px;
+  place-items: center;
+  align-content: center;
+  color: #647572;
+  text-align: center;
+}
+
+.admin-empty-state > svg {
+  margin-bottom: .65rem;
+  color: #007d89;
+}
+
+.admin-empty-state h2 {
+  margin-bottom: .3rem;
+  color: #304440;
+  font-size: 1rem;
+}
+
+.admin-empty-state p {
+  margin: 0;
+  font-size: .78rem;
+}
+
+@media (max-width: 575.98px) {
+  .admin-workspace-heading,
+  .admin-tab-content {
+    padding: .9rem;
+  }
+}

@@ -1,0 +1,19 @@
+dn: dc=idbi,dc=bank
+objectClass: top
+objectClass: domain
+dc: idbi
+
+dn: ou=people,dc=idbi,dc=bank
+objectClass: top
+objectClass: organizationalUnit
+ou: people
+
+dn: uid=int12991,ou=people,dc=idbi,dc=bank
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Ashitosh Treasury User
+sn: Treasury User
+uid: int12991
+userPassword: treasury123
